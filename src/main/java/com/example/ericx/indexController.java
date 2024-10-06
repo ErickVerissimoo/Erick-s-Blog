@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class indexController {
 	@Autowired
 	postRepository rep;
-	
+
 
 	@GetMapping
 	public String index(Model model) {
@@ -23,9 +23,9 @@ public class indexController {
 		for(String postagem : rep.AllIds()) {
 			postagens.add(postagem);
 		}
-		
+
 		model.addAttribute("Postagens", postagens);
-		
+
 		return "index";
 	}
 }

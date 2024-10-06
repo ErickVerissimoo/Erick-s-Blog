@@ -1,7 +1,10 @@
 package com.example.ericx;
 
+import java.sql.Date;
 import java.sql.Time;
+
 import org.springframework.stereotype.Component;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,8 +19,14 @@ public class post {
 	private String titulo;
 	private String descricao;
 	private Time hora;
-	
-	
+	private Date data;
+
+	public Date getData() {
+		return data;
+	}
+	public void setData(Date data) {
+		this.data = data;
+	}
 	public void setId(int id) {
 		this.id = id;
 	}
@@ -33,7 +42,7 @@ public class post {
 	public Time getHora() {
 		return hora;
 	}
-	
+
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
@@ -43,8 +52,8 @@ public class post {
 	public void setHora(Time hora) {
 		this.hora = hora;
 	}
-	
+
 	public post() {
 	}
-	
+
 }

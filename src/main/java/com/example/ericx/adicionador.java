@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class adicionador {
 	@Autowired
 	private postService rep;
-	
+
 	@GetMapping
 	public String mostrar(Model model) {
 		model.addAttribute("postagem", new post());
 		return "add";
 	}
-	
+
 @PostMapping
 public String adiciona(@ModelAttribute post postagem, Model model) {
 	rep.Adicionar(postagem);

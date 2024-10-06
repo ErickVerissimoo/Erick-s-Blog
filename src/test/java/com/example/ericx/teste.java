@@ -12,6 +12,6 @@ public class teste {
 	public void testeOne() {
 		var testagem = rep.todos();
 		testagem.forEach(System.out::println);
-		
+
 	}
 }
