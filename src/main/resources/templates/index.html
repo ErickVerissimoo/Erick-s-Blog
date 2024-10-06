@@ -1,18 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Criar post para o blog</h1>
-<form method="post" action="Home">
-<label for="Titulo" >Título do blog: </label><br>
-<input type="text" name="Titulo"><br>
-<label for="body" >Post: </label><br>
-<input type="text" name="body"><br>
-
-<button type="submit">Postar</button>
-</form>
+<p th:text="${Postagens}" > </p>
 </body>
 </html>
