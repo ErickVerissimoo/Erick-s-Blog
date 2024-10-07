@@ -11,7 +11,7 @@ public class teste {
 	@Test
 	public void testeOne() {
 		var testagem = rep.todos();
-		testagem.forEach(System.out::println);
+		testagem.forEach((post e) -> System.out.print("\n\tTitulo: " + e.getTitulo() + "\n\tdescricao: " + e.getDescricao()));
 
 	}
 }

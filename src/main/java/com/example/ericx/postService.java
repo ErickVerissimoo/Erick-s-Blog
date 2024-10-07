@@ -1,6 +1,8 @@
 package com.example.ericx;
 
+import java.sql.Date;
 import java.sql.Time;
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
@@ -14,9 +16,10 @@ public class postService {
 
 	public void Adicionar(post postagem) {
 		postagem.setHora(Time.valueOf(LocalTime.now()));
+		postagem.setData(Date.valueOf(LocalDate.now()));
 		repositorio.save(postagem);
 	}
-	public List<String> todos() {
-		return repositorio.AllIds();
+	public List<post> todos() {
+		return repositorio.All();
 	}
 }

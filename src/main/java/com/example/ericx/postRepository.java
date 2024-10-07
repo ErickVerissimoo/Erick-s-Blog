@@ -11,9 +11,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface postRepository  extends JpaRepository<post, Integer>{
 
-	@Query("Select descricao from post")
-	List <String> AllIds();
-
+	@Query("Select p from post p")
+	List <post> All();
+	
 
 
 }
